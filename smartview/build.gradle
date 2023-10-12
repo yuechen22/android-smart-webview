@@ -1,13 +1,11 @@
 plugins {
     id 'com.android.library'
     id 'maven-publish'
-
 }
 
 android {
     namespace 'com.genit.smartview'
     compileSdk 33
-
 
     buildTypes {
         release {
@@ -29,13 +27,13 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
-afterEvaluate {
-    android.libraryVariants.each { variant ->
-        publishing.publications.create(variant.name, MavenPublication) {
-            from components.findByName(variant.name)
-            groupId = 'com.genit'
-            artifactId = 'smartview'
-            version= '1.0.5'
-        }
-    }
-}
+//afterEvaluate {
+//    android.libraryVariants.each { variant ->
+//        publishing.publications.create(variant.name, MavenPublication) {
+//            from components.findByName(variant.name)
+//            groupId = 'com.genit'
+//            artifactId = 'smartview'
+//            version= '1.0.5'
+//        }
+//    }
+//}
