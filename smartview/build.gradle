@@ -33,7 +33,8 @@ afterEvaluate {
     android.libraryVariants.each { variant ->
         publishing.publications.create(variant.name, MavenPublication) {
             from components.findByName(variant.name)
-
+            groupId = 'com.genit'
+            artifactId = 'smartview'
             version= '1.0.4'
         }
     }
